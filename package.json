@@ -1,0 +1,25 @@
+{
+  "name": "census_app",
+  "version": "1.0.0",
+  "description": "A census app",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -cLv -t 100",
+	"start": "node index.js"
+  },
+  "keywords": [
+    "census",
+    "population"
+  ],
+  "author": "DGO",
+  "license": "ISC",
+  "dependencies": {
+    "code": "^4.0.0",
+    "hapi": "^16.1.0",
+    "hapi-mongodb": "^6.2.0",
+    "joi": "^10.1.0"
+  },
+  "devDependencies": {
+    "lab": "^11.2.1"
+  }
+}

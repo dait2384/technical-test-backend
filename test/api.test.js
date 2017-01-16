@@ -9,7 +9,7 @@ const Routes = require('../routes');
 
 lab.experiment('test routes',() => {
 
-    lab.test('Ensure that server exists', (done) => {
+    lab.test('1) Ensure that server and db conn is ok: ', (done) => {
 
         const Server = new Hapi.Server();
 
@@ -49,7 +49,7 @@ lab.experiment('test routes',() => {
         });
     });
 
-    lab.test('Ensure that server exists', (done) => {
+    lab.test('2) Ensure that server exists and root of app goes on: ', (done) => {
 
         const Server = new Hapi.Server();
 
@@ -99,7 +99,7 @@ lab.experiment('test routes',() => {
         });
     });
 
-    lab.test('Ensure that server exists', (done) => {
+    lab.test('3) Ensure that server exists and /test path it´s ok: ', (done) => {
 
         const Server = new Hapi.Server();
 
@@ -148,7 +148,7 @@ lab.experiment('test routes',() => {
         });
     });
 
-    lab.test('Ensure the census endpoint', (done) => {
+    lab.test('4) Ensure the /CITIES endpoint', (done) => {
 
         const Server = new Hapi.Server();
 
@@ -200,7 +200,7 @@ lab.experiment('test routes',() => {
         });
     });
 
-    lab.test('Ensure the census endpoint', (done) => {
+    lab.test('5) Ensure the /CITIES/{CITY} endpoint it´s ok: ', (done) => {
 
         const Server = new Hapi.Server();
 
@@ -252,7 +252,7 @@ lab.experiment('test routes',() => {
         });
     });
 
-    lab.test('Ensure the census endpoint', (done) => {
+    lab.test('6) Ensure the /AGES endpoint it´s ok: ', (done) => {
 
         const Server = new Hapi.Server();
 
@@ -304,7 +304,7 @@ lab.experiment('test routes',() => {
         });
     });
 
-    lab.test('Ensure the census endpoint', (done) => {
+    lab.test('7) Ensure the /CENSUS endpoint it´s ok: ', (done) => {
 
         const Server = new Hapi.Server();
 
@@ -356,7 +356,7 @@ lab.experiment('test routes',() => {
         });
     });
 
-    lab.test('Ensure the post endpoint', (done) => {
+    lab.test('8) Ensure the post endpoint /ADDCITY it´s ok: ', (done) => {
 
         const Server = new Hapi.Server();
         Server.connection({
@@ -391,7 +391,7 @@ lab.experiment('test routes',() => {
                 Server.inject({
                     method:'POST',
                     url:'/addcity',
-                    payload: { ts: new Date().getTime(), city:'Vitoria', population:[ { age:150, count:10 }, { age:130, count:20 } ] }
+                    payload: { ts: new Date().getTime(), city:'Gijón', population:[ { age:150, count:10 }, { age:130, count:20 } ] }
                 },
                 (response) => {
 

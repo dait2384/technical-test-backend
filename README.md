@@ -175,3 +175,27 @@ For testing with Hapi Lab:
 	1) docker-compose build
 	2) docker_compose up
 ```
+
+### Routes of this API
+
+	1) Endpoint 1: Return most updated record of each city
+```
+	/cities
+```
+
+	2) Endpoint 2: Return the population by ascending age of the city specified in the URL as parameter
+```
+	/cities/{city}
+```
+	3) Endpoint 3: Resume (SUM,MEAN,MAX,MIN) of each age in ascending order with latest record of each city
+```
+	/ages
+```
+	4) Endpoint 4: Return (SUM,MEAN,MAX,MIN) historical census of each city
+```
+	/census
+```
+	5) Endpoint 5: Insert a document with new data
+```
+	/addcity
+```

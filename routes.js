@@ -222,4 +222,37 @@ exports.init = (server) => {
             );
         }
     });
+	
+	// Endpoint: Insert a document with new data
+    server.route({
+        method: 'POST',
+        path: '/addcity',
+        config: {
+            handler: function (request,reply){
+
+                // Insert the object in the db
+                const newCity = request.payload;
+                newCity.ts = new Date().getTime();
+                const db = request.mongo.db;
+                db.collection('cities_pop').insert(newCity, { w:1 }, (err, doc) => {
+
+                    if (err){
+                        return reply(Hapi.error.internal('Internal MongoDB error', err));
+                    }
+                    return reply({ message:doc,'resultCode':0 });
+                });
+            },
+            validate: {
+                payload: {
+                    ts: Joi.number().required(),
+                    city: Joi.string().required(),
+                    population: Joi.array().items(Joi.object().keys({
+                        age: Joi.number().required(),
+                        count: Joi.number().required()
+                    }))
+                }
+            }
+        }
+    });
+
 };

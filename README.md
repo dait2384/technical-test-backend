@@ -158,14 +158,20 @@ This endpoint will return the Historical census statistics of each city. So, for
 ## How to run this app
 
 Open a cmd and go to the app´s directory. Then type:
+```
 	1) npm install
 	2) npm start
+```
 	
 For testing with Hapi Lab:
+```
 	Prerequisite: npm install executed
 	1) npm test
+```
 	
 ### Launch with Docker
 
+```
 	1) docker-compose build
 	2) docker_compose up
+```

@@ -164,3 +164,8 @@ Open a cmd and go to the app´s directory. Then type:
 For testing with Hapi Lab:
 	Prerequisite: npm install executed
 	1) npm test
+	
+### Launch with Docker
+
+	1) docker-compose build
+	2) docker_compose up

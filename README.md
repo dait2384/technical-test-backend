@@ -159,6 +159,8 @@ This endpoint will return the Historical census statistics of each city. So, for
 
 Open a cmd and go to the app´s directory. Then type:
 ```
+	Prerequisite: start MongoDB: mongod
+	
 	1) npm install
 	2) npm start
 ```

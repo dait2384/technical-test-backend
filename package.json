@@ -7,12 +7,20 @@
     "test": "lab -cLv -t 100",
 	"start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dait2384/technical-test-backend.git"
+  },
   "keywords": [
     "census",
     "population"
   ],
   "author": "DGO",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dait2384/technical-test-backend/issues"
+  },
+  "homepage": "https://github.com/dait2384/technical-test-backend#readme",
   "dependencies": {
     "code": "^4.0.0",
     "hapi": "^16.1.0",
